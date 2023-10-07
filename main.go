@@ -10,20 +10,21 @@ import (
 func main(){
 	app := &cli.App{
 		Name: "Healthchecker",
-		Usage: "A tiny tool that checks whether a website is up and running or not "
-		Flags: [] cli.Flag{
+		Usage: "A tiny tool that checks whether a website is up and running or not ",
+		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name:"domain",
-				Alises::[]string{"d"},
-				Usage:"Domain name to check.",
-				Required:true,
+				Name:	"domain",
+				Aliases:	[]string{"d"},
+				Usage:	"Domain name to check.",
+				Required:	true,
 			},
 			&cli.StringFlag{
-				Name:"port",
-				Aliases:[]string("p")
-				Usage:"Port number to check",
-				Requred:false,
+				Name:	"port",
+				Aliases:	[]string{"p"},
+				Usage:	"Port number to check",
+				Required:	false,
 			},
+		},
 		Action: func (c *cli.Context) error {
 			port := c.String("port")
 			if c.String("port") == ""{
