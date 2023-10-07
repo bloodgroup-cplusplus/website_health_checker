@@ -6,8 +6,8 @@ import (
 
 func main(){
 	app := &cli.App{
-		Name:
-		Usage:
+		Name: "Healthchecker",
+		Usage: "A tiny tool that checks whether a website is up and running or not "
 		Flags:
 		Action:
 	}
